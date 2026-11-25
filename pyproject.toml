@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tbhiv"
+version = "1.0.0"
+description = "Blood gene signatures for active vs latent TB in HIV- and HIV+ African adults (GSE37250, GSE19491)"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Matthew Nguithi" }, { name = "Ray Lukorito" }, { name = "William Githinji" }]
+dependencies = [
+    "numpy>=1.24", "pandas>=2.0", "scipy>=1.10", "statsmodels>=0.14", "scikit-learn>=1.3",
+    "matplotlib>=3.7", "networkx>=3.1", "GEOparse>=2.0.3", "six", "gseapy>=1.0",  # six: undeclared GEOparse dependency
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

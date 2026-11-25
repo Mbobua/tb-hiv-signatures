@@ -1,0 +1,15 @@
+# downloaded data (re-created by the notebook; GEO files are large)
+data/*
+!data/.gitkeep
+
+# generated results (commit the final run deliberately with `git add -f results/...` if wanted)
+results/*
+!results/.gitkeep
+results_SYNTHETIC_DEMO/
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+.venv/
